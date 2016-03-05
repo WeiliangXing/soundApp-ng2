@@ -13,11 +13,6 @@ import {SongItemCmp} from '../SongItem.ts';
 			<song-item *ngFor="#song of result" [song]="song" [show-add]="true" [show-play]="true"></song-item>
 		</div>
 
-		<div id='search-help' *ngIf='result == null || result.length == 0'>
-			<img src='/images/arrow.jpg'/>
-			<p>Search your music on SoundCloud</p>
-		</div>
-
 	</div>
 	`,
 	styles: [`
@@ -43,7 +38,7 @@ export class SearchResultCmp {
 
 	@Input() result: Song[];
 
-	private showAdd: boolean = true;
+	// private showAdd: boolean = true;
 
 	private playlistService: PlaylistService;
 

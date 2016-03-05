@@ -7,7 +7,7 @@ import {Observable}     from 'rxjs/Observable';
 @Injectable()
 export class SoundCloudSearch implements ISearch {
 
-	private clientId: string = '8e1349e63dfd43dc67a63e0de3befc68';
+	private clientId: string = '758445f03a3b5d68bc5889e416ece1e7';
 	private http: Http;
 
 	constructor(http: Http) {
@@ -43,8 +43,8 @@ export class SoundCloudSearch implements ISearch {
 		return result;
 	}
 
-	handleError(e: Response) {
-		console.log(e);
+	handleError(error:Response) {
+		console.log(error);
 	}
 
 	makeSearchUri(keyword: string) : string {

@@ -44,29 +44,29 @@ import {PlaylistService} from '../services/PlaylistService.ts';
 			font-size: 12px;
 	}
 	.nav-tabs {
-			border: 1px solid #ff8b00;
+			border: 1px solid #dfe3ee;
 			border-radius: 5px;
 			margin: 0 5px;
 	}
 
 	.nav-tabs a{
-			color:#ff8b00;
+			color:#dfe3ee;
 	}
 	.nav-tabs li > a:hover,
 	.nav-tabs li.active > a:hover{
-			background: #ff8b00;
+			background: #8b9dc3;
 			color: #363636;
 	}
 	.nav-tabs li.active > a{
-			background: #ff8b00;
+			background: #8b9dc3;
 			color: #363636;
 	}
 	.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus{
-			border-bottom: 1px solid #ff8b00;
+			border-bottom: 1px solid #dfe3ee;
 			border-top: none;
 			border-left: none;
 			border-right: none;
-			background-color: #ff8b00;
+			background-color: #dfe3ee;
 	}
 	.nav-tabs li > a{
 			border-radius: 0;
@@ -82,7 +82,7 @@ import {PlaylistService} from '../services/PlaylistService.ts';
 	}
 	.nav-tabs>li+li > a,
 	.nav-tabs>li+li > a:hover{
-			border-left: 1px solid #ff8b00;
+			border-left: 1px solid #dfe3ee;
 	}
 	a:hover{
 			color: #613203;

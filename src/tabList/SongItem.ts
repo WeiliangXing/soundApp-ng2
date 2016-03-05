@@ -53,7 +53,7 @@ import {SoundManager} from "../services/SoundManager.ts";
 
 				</div>
 			</div>
-
+			
 			<i class="glyphicon icon-sound playing-song-icon" *ngIf='playingSong != null && song.id == playingSong.id'></i>
 		</div>
 	</div>

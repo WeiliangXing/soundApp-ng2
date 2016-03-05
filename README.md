@@ -11,3 +11,9 @@ In this app, we could:
 
 ## License
 MIT:
+
+
+## NOTES:
+1) in pacakge.json, you could change script's start to
+/*previous script's start*/
+/*"start": "node_modules/.bin/live-server"*/

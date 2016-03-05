@@ -69,7 +69,7 @@ export class SearchBoxCmp implements OnInit {
 
 		this.keyword
 					.valueChanges
-					.debounceTime(400)
+					.debounceTime(200)
 					.distinctUntilChanged()
 					.flatMap(keywordStr => this.searchClient.search(keywordStr.toString()))
 					.subscribe(data => {
@@ -88,8 +88,9 @@ export class SearchBoxCmp implements OnInit {
 					this.searchResult.emit(data);
 				});
 	}
-
+// AngularJS 2 uses "$event" as the token for the emitted value in the event-binding's dependency-injection context.
 	onInputKeyword($event: any) {
+		// 13 is return key
 		if ($event.keyCode == 13) {
 			return this.search($event.target.value);
 		}
