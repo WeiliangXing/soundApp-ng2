@@ -75,6 +75,11 @@ System.register(['angular2/core', './LocalStorage.ts', 'rxjs/Rx'], function(expo
                     this.syncWithLocalStorage();
                     this.publishChanges();
                 };
+                PlaylistService.prototype.deleteAll = function () {
+                    this._data = [];
+                    this.syncWithLocalStorage();
+                    this.publishChanges();
+                };
                 PlaylistService.prototype.setIndexBySong = function (song) {
                     var index = this._data.indexOf(song);
                     if (index > -1) {

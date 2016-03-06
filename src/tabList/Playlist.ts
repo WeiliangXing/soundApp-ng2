@@ -6,6 +6,12 @@ import {PlaylistService} from '../services/PlaylistService.ts';
 	selector: 'playlist',
 	directives: [SongItemCmp, NgFor],
 	template: `
+	<a href="#"
+			title="DeleteAll"
+			class="delete-all-button"
+			(click)='deleteAll()'
+			>
+			<i class="glyphicon icon-delete-all"></i></a>
 	<div class="tab-pane" id="playlistContainer">
 		<song-item *ngFor="#song of data" [song]="song" [show-add]="false" [show-play]="true" [show-delete]="true"></song-item>
 	</div>
@@ -32,6 +38,10 @@ export class PlaylistCmp implements OnInit{
 
 	ngOnInit() {
 
+	}
+
+	deleteAll(){
+		this.playlistService.deleteAll();
 	}
 
 }

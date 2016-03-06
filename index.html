@@ -1,7 +1,12 @@
 <html>
   <head>
     <title>Angular 2 Music</title>
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css"> -->
 		<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <!-- Compiled and minified JavaScript -->
+    <link rel='shortcut icon' href='https://www.angularjs.org/favicon.ico' type='image/x-icon' />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<style>
 			*:focus {
 					outline: 0;
@@ -30,9 +35,15 @@
 		<script src="node_modules/typescript/lib/typescript.js"></script>
 		<script src="node_modules/soundmanager2/script/soundmanager2.js"></script>
 
+
+    <!--materialize  -->
+    <script src=" https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+
     <script>
-     // from william's client id of app music-app-ng2 in soundcloud 
-			var soundCloudClientId = '758445f03a3b5d68bc5889e416ece1e7';
+     // from william's client id of app music-app-ng2 in soundcloud
+     var soundCloudClientId = '758445f03a3b5d68bc5889e416ece1e7';
 
 
       System.config({
@@ -45,6 +56,22 @@
     </script>
   </head>
   <body>
-    <app>Loading</app>
+    <app>
+      <!-- from materializecss.com  for preload cycle-->
+      <div class="preloader-wrapper big active main-loader" style="position:absolute; top: 30%; left: 50%; margin: -50px 0 0 -50px;">
+        <div class="spinner-layer spinner-blue-only">
+          <div class="circle-clipper left">
+            <div class="circle"></div>
+          </div>
+          <div class="gap-patch">
+            <div class="circle"></div>
+          </div>
+          <div class="circle-clipper right">
+            <div class="circle"></div>
+          </div>
+        </div>
+      </div>
+    </app>
+    <!-- <app>Loading</app> -->
   </body>
 </html>

@@ -63,6 +63,14 @@ export class PlaylistService {
 		this.publishChanges();
 	}
 
+
+	deleteAll(){
+			this._data = [];
+			this.syncWithLocalStorage();
+			this.publishChanges();
+	}
+
+
 	setIndexBySong(song: Song) {
 		var index = this._data.indexOf(song);
 		if (index > -1) {
@@ -85,4 +93,5 @@ export class PlaylistService {
 	private syncWithLocalStorage() {
 		this.localStorageService.setObject('playlist_data', this._data);
 	}
+
 }

@@ -38,11 +38,14 @@ System.register(['angular2/core', 'angular2/common', './SongItem.ts', '../servic
                 }
                 PlaylistCmp.prototype.ngOnInit = function () {
                 };
+                PlaylistCmp.prototype.deleteAll = function () {
+                    this.playlistService.deleteAll();
+                };
                 PlaylistCmp = __decorate([
                     core_1.Component({
                         selector: 'playlist',
                         directives: [SongItem_ts_1.SongItemCmp, common_1.NgFor],
-                        template: "\n\t<div class=\"tab-pane\" id=\"playlistContainer\">\n\t\t<song-item *ngFor=\"#song of data\" [song]=\"song\" [show-add]=\"false\" [show-play]=\"true\" [show-delete]=\"true\"></song-item>\n\t</div>\n\t",
+                        template: "\n\t<a href=\"#\"\n\t\t\ttitle=\"DeleteAll\"\n\t\t\tclass=\"delete-all-button\"\n\t\t\t(click)='deleteAll()'\n\t\t\t>\n\t\t\t<i class=\"glyphicon icon-delete-all\"></i></a>\n\t<div class=\"tab-pane\" id=\"playlistContainer\">\n\t\t<song-item *ngFor=\"#song of data\" [song]=\"song\" [show-add]=\"false\" [show-play]=\"true\" [show-delete]=\"true\"></song-item>\n\t</div>\n\t",
                         styles: ["\n\t#playlistContainer{\n\t\tpadding:7px;\n\t\tmax-height: 400px;\n\t\toverflow-y: scroll;\n\t}\n\t"]
                     }), 
                     __metadata('design:paramtypes', [PlaylistService_ts_1.PlaylistService])
