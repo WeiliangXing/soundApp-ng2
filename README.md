@@ -9,6 +9,9 @@ In this app, we could:
 - Play, pause, toggle volume
 - Manage songs in playlist
 
+## Design
+Based on Object Oriented Design Principle
+
 ## License
 MIT:
 
