@@ -10,7 +10,7 @@ In this app, we could:
 - Manage songs in playlist
 
 ## Design
-Based on Object Oriented Design Principle
+Based on Component based design 
 
 ## License
 MIT:
